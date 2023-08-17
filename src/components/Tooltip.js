@@ -1,5 +1,4 @@
 import React , {useState} from "react";
-import Tip from "./Tip";
 
 const Tooltip = () =>{
     const [hover, setHover] = useState(false);
@@ -12,7 +11,7 @@ const Tooltip = () =>{
                 onMouseLeave={()=> setHover('')}
             >
                 Hover over me
-                {hover === 'h2' && <Tip text='This is a tooltip'/>}
+                {hover === 'h2' && <div>This is a tooltip</div>}
             </h2>
             <p 
                 className="tooltip"
@@ -20,7 +19,7 @@ const Tooltip = () =>{
                 onMouseLeave={() => setHover('')}
             >
                 Hover over me to see another tooltip
-                {hover === 'p' && <Tip text = 'This is another tooltip'/>}
+                {hover === 'p' && <div>This is another tooltip</div>}
             </p>
         </div>
     )
