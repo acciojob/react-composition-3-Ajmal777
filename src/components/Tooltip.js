@@ -11,7 +11,7 @@ const Tooltip = () =>{
                 onMouseLeave={()=> setHover('')}
             >
                 Hover over me
-                {hover === 'h2' && <div className="tooltiptext">This is a tooltip</div>}
+                <div className="tooltiptext">{hover == 'h2' && 'This is a tooltip'}</div>
             </h2>
             <p 
                 className="tooltip"
@@ -19,7 +19,7 @@ const Tooltip = () =>{
                 onMouseLeave={() => setHover('')}
             >
                 Hover over me to see another tooltip
-                {hover === 'p' && <div className="tooltiptext">This is another tooltip</div>}
+                <div className="tooltiptext">{hover === 'p' && 'This is another tooltip'}</div>
             </p>
         </div>
     )
