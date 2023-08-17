@@ -1,17 +1,27 @@
 import React , {useState} from "react";
 
-const Tooltip = ({children, text}) =>{
+const Tooltip = () =>{
     const [hover, setHover] = useState(false);
 
     return (
-        <h2 
-            className="tooltip"
-            onMouseEnter={()=>setHover(true)}
-            onMouseLeave={()=>setHover(false)}
-        >
-            {children}
-            { hover && (<div className="tooltiptext"> {text} </div>) }
-        </h2>
+        <div>
+            <h2 
+                className="tooltip"
+                onMouseEnter={()=> setHover('h2')}
+                onMouseLeave={()=> setHover('')}
+            >
+                Hover over me
+                {hover === 'h2' && <div className="tooltiptext">This is a tooltip</div>}
+            </h2>
+            <p 
+                className="tooltip"
+                onMouseEnter={() => setHover('p')}
+                onMouseLeave={() => setHover('')}
+            >
+                Hover over me to see another tooltip
+                {hover === 'p' && <div className="tooltiptext">This is another tooltip</div>}
+            </p>
+        </div>
     )
 }
 
