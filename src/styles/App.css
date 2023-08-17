@@ -1,1 +1,7 @@
-
+.tooltip{
+    position: relative;
+}
+.tooltiptext{
+    position: absolute;
+    top: -100%;
+}
